@@ -1,0 +1,90 @@
+﻿<Window x:Class="VideoStreamer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="600" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Name="CameraBox" Margin="140,20,130,275"/>
+        <GroupBox Header="USB camera" Height="100" Width="180"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,255,0,0">
+            <Grid>
+                <Button Name="usbconnect" Content="Connect" Width="75" Margin="32,19,0,0" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Click="ClickUsb"/>
+                <Button Name="usbdisconnect" Content="Disconnect" Width="75" Margin="32,46,0,0"
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Click="unClickUsb" IsEnabled="False"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="IP camera" Height="100" Width="404" 
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,255,0,0">
+            <Grid Margin="43,0,0.2,-0.4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="305*"/>
+                    <ColumnDefinition Width="52*"/>
+                </Grid.ColumnDefinitions>
+                <Label Height="25" Width="70" Content="Host" 
+                       HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="HostTextBox" HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Height="23" Width="169" Margin="68,2,0,0" TextWrapping="Wrap" />
+                <Label Height="25" Width="70" Content="Username" 
+                       HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="UserTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                         Height="23" Width="169" Margin="68,29,0,0" TextWrapping="Wrap"/>
+                <Label Height="25" Width="70" Content="Password" 
+                       HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,52,0,0" />
+                <PasswordBox Name="Password" HorizontalAlignment="Left" VerticalAlignment="Top"
+                             Height="25" Width="169" Margin="68,56,0,-3.4"/>
+                <Button Name="ipconnect" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Margin="267,16,0,0"  Width="75" Click="ClickIp" Grid.ColumnSpan="2"/>
+                <Button Name="ipdisconnect" Content="Disconnect" HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Margin="267,43,0,0"  Width="75" Click="unClickIp" IsEnabled="False" Grid.ColumnSpan="2" />
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Stream in MJPEG" Height="160" Width="594" Margin="0,360,0,0"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Grid Margin="0,0,-3.2,-0.4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="IP"/>
+                        <TextBox Name="ipAddressText" HorizontalAlignment="Stretch" Height="30" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="70,8,-215.4,7.6" />
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="Port"/>
+                        <TextBox Text="554" Name="PortText" HorizontalAlignment="Stretch" Height="30" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="70,8,-215.4,8.4" RenderTransformOrigin="0.722,0.474" />
+                    </Grid>
+
+                    <Grid Grid.Row="2" Margin="0,0,-285.2,-0.4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="startstream" Grid.Column="0" Content="Start Stream" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="Start_Streaming_Click" IsEnabled="False"/>
+                        <Button Name="stopstream" Grid.Column="1" Content="Stop Stream" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="Stop_Streaming_Click" IsEnabled="False" RenderTransformOrigin="0.856,0.598"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

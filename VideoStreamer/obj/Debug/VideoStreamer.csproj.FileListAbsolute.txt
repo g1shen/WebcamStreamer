@@ -1,0 +1,14 @@
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\bin\Debug\VideoStreamer.exe.config
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\bin\Debug\VideoStreamer.exe
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\bin\Debug\VideoStreamer.pdb
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\bin\Debug\VoIPSDK.dll
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer.csprojResolveAssemblyReference.cache
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\MainWindow.baml
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\MainWindow.g.cs
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\App.g.cs
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer_MarkupCompile.cache
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer.g.resources
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer.Properties.Resources.resources
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer.csproj.GenerateResource.Cache
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer.exe
+c:\users\guangyan shen\desktop\VideoStreamer\VideoStreamer\obj\Debug\VideoStreamer.pdb
